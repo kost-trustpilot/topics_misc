@@ -18,9 +18,9 @@ compute_correlations = True
 compute_stats = True
 
 # data scope (obs: 9k labels will generate ~15GB of similarity data for each 1mln of sentences, if integer16 encoded)
-max_sentences = 320000#0 # None -> include all (~16mln)
+max_sentences = 3200000 # None -> include all (~16mln)
 max_topics = None # None -> include them all (~9k)
-n_batches = 16#0
+n_batches = 160
 
 # if restarting job, specify batch >0
 batch_start = 0
@@ -34,7 +34,7 @@ bert_model = 'stsb-xlm-r-multilingual'
 #similarity_batch_size = 500
 
 
-# local directory
+# GCS input directory and local output directory
 gcs_dir = r'gcs://datascience-models-staging/pi_topics/candidate_selection'
 data_dir = r'/home/kost/python_data/trustpilot/topic/candidates'
 
